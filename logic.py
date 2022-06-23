@@ -1,13 +1,17 @@
+#[5, 1, 2, 2]
 def check(list):
     for each in range(len(list)):
-        temp = list(each)
-        list.pop(each)
-        for i in range(list):
+        num = each
+        temp = list[num]
+        list.pop(num)
+        #print(f"Rnum:{list}")
+        for i in list:
+            #print(f"{i} == {temp}/{num}")
             if i == temp:
                 final = 1
-                list.insert(each, temp)
-                return final, each
-            if  i != temp:
+                list.insert(num, temp)
+                return final, num
+            if i != temp:
                 final = 0
-                list.insert(each, temp)
-                return final, each
+        list.insert(num, temp)
+    return final, num
