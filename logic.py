@@ -1,4 +1,4 @@
-#[5, 1, 2, 2]
+
 def check(list):
     for each in range(len(list)):
         num = each
